@@ -22,8 +22,10 @@ test:
 
 production:
   adapter: postgresql
+  template: template0
   encoding: unicode
-  database: railsapp_development
+  database: postgres
   pool: 5
   username: postgres
-  password: mtm2393
+  password:
+  host: db_1
