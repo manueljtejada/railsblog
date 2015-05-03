@@ -21,11 +21,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: postgresql
-  template: template0
-  encoding: unicode
-  database: postgres
-  pool: 5
-  username: postgres
-  password:
-  host: db_1
+  adapter: mysql2
+  encoding: utf8
+  database: railsblog_name
+  username: root
+  password: mtm2393
+  host: 127.0.0.1
+  port: 3306
