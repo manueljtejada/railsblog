@@ -1,16 +1,18 @@
 class CommentsController < ApplicationController
 
+	# encoding: utf-8
+
 	def create
-	    @post = Post.find(params[:post_id])
-	    @comment = @post.comments.create(comment_params)
-	    redirect_to post_path(@post)
+	    @article = Article.find(params[:article_id])
+	    @comment = @article.comments.create(comment_params)
+	    redirect_to article_path(@article)
 	end
 
 	def destroy
-	    @post = Post.find(params[:post_id])
-	    @comment = @post.comments.find(params[:id])
+	    @article = Article.find(params[:article_id])
+	    @comment = @article.comments.find(params[:id])
 	    @comment.destroy
-	    redirect_to post_path(@post)
+	    redirect_to article_path(@article)
 	end
 	 
 	private
