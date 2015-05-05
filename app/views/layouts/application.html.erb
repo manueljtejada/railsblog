@@ -73,24 +73,5 @@
 
 </div>
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <p>Rails Blogger. Final Project for TC 362. Developed by Manuel J. Tejada. </p>
-      </div>
-      <div class="col-md-4">
-        <ul class="list-inline text-right">
-          <li><%= link_to "Blog", articles_path %></li>
-          <li><%= link_to "About Me", about_path %></li>
-          <% if user_signed_in? %>
-            <li><%= link_to 'Profile', edit_user_registration_path %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
-
 </body>
 </html>
